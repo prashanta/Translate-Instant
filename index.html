@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>
+	Translate
+</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+ 
+<link rel="apple-touch-startup-image" href="images/ti.png" />    
+<link rel="apple-touch-icon" href="images/ti.png">
+
+<link rel="stylesheet"  href="scripts/jquery.mobile-1.0a1.min.css" />
+<link rel="stylesheet"  href="scripts/translate-instant.css" />
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.mobile-1.0a1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="scripts/bookmark-bubble.js"></script>
+<script type="text/javascript" src="scripts/translate-instant.js"></script>
+
+</head>
+<body>
+	
+	<!-- MAIN PAGE  -->
+    <div data-role="page" id="main">     	
+    	<div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">    		
+    		<input id="saved" type="button" data-icon="star" value="Saved" data-theme="b"/>
+    		<h1>Translate Instant</h1>    		
+    		<a id="about" href="#about" type="button" data-icon="info" value="About" iconpos="notext" data-theme="b">About</a>
+    	</div>
+    	
+ 		<div data-role="content"> 			 			
+ 			<div class="online">
+ 				<div>
+ 					<input type="text" name="name" id="input" value="" data-theme="d" /> 			 			
+	 			</div>
+ 			
+ 				<div class='input-group'> 			
+	 				<div id="result" style="padding: 15px;"></div>	 				 			 					
+			 	</div>
+			 	
+		 		<div style="position: relative; margin-left: 5px;">	
+		 			<div data-role="controlgroup"  data-type="horizontal">
+		 				<input id="save-this" type="button" data-icon="add" value="Save" data-iconpos="notext" data-theme="c"/>
+		 				<input id="clear-this" type="button" data-icon="delete" value="Clear" data-iconpos="notext" data-theme="c" />
+			 		</div>
+			 	</div>		 			 		 			
+				<center>
+	 				<div data-role="controlgroup"  data-type="horizontal" >				 			
+	 					<span id="ips-container" style="">
+		 					<input id="ips" type="button" value="English" data-theme="e" style="font-size: 10px"/>
+	 					</span>	
+	 				
+		 				<span id="to" style="">
+		 				&nbsp;&nbsp;to&nbsp;
+	 					</span>
+
+	 					<span id="ops-container" style="">
+		 					<input id="ops" type="button" value="Thai" data-theme="e" style="font-size: 10px"/>
+	 					</span>	 				
+		 			</div>	 			
+				</center>
+			</div>				
+ 		</div> 		
+    </div>     
+        
+    <!-- Starred Page -->
+    <div data-role="page" id="starred">     	    	
+    	<div data-role="header" data-position="inline" data-theme="b">    		
+    		<input type="button" data-icon="arrow-l" value="Back" onClick="history.back()" data-theme="b"/>
+    		<h1>Saved</h1>    		
+    		<input id="starred-clear" type="button" data-icon="delete" value="Clear" data-theme="b"/>
+    	</div>   
+    	<div data-role="content" id="starred-list">	
+			
+    	</div> 	
+    </div>     
+    
+    <!-- Full text display -->
+    <div data-role="page" id="full">     	    	
+    	<div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">    		
+    		<h1>Translate Instant</h1>    		
+    	</div>
+    	<div data-role="content"> 			 			
+    		<div id="fulltext" style="font-size: 35px;"></div>
+    	</div>    			
+    </div>     
+    
+    <!-- ABOUT PAGE -->
+    <div data-role="page" id="about">     	    	
+    	<div class="about-page">
+    		<div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">    	
+    			<h1>About</h1>    		
+	    	</div>
+	    	
+    		<div data-role="content">     		
+    			<center class="app-title">
+    				<img src="images/ti.png" /><br>
+	    			TRANSLATE INSTANT
+    			</center>    			
+    			<br>
+    			<center style="color: #000; text-shadow: #555 1px 1px 1px; font-weight: bold; font-size:12px;">
+    			Powered by: 
+    			</center> 
+    			<center style="color: #000; text-shadow: #555 1px 1px 1px; font-weight: bold; font-size:14px;">
+    			jQuery Mobile (1.0a1) & Google Translate API      			    			
+	    		</center>	    		
+    		</div>
+    		
+    		<center><iframe src="http://www.facebook.com/plugins/like.php?href=http://pmshrestha.byethost4.com/labs/translate-instant/&amp;layout=button_count&amp;show_faces=true&amp;width=200&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></center>
+    		
+    		<span style="font-size: 10px; position: absolute; height: 30px; bottom: 0px; left: 0px; right: 0px; text-align: center; color: #AAA; text-shadow: #000 1px 1px 1px;">
+    		Made on a Macintosh.
+    		</span>
+    		
+    	</div>    			
+    </div>     
+    
+    <!-- SELECT SOURCE LANGUAGE -->
+    <div data-role="page" id="select-input">
+    	<div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">    	
+    		<h1>Select Source</h1>    		
+    	</div>
+    	<div data-role="content">     		
+	    	<ul data-role="listview">
+	    	    <li><div class='in-lang' value="it">English</div></li>	
+    			<li><div class='in-lang' value="th">Thai</div></li>
+    			<li><div class='in-lang' value="fr">French</div></li>
+    			<li><div class='in-lang' value="es">Spanish</div></li>
+    		</ul>
+    	</div>
+    </div>
+    
+    <!-- SELECT DESTINATION LANGUAGE -->
+    <div data-role="page" id="select-output">
+    	<div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">    	
+    		<h1>Select Destination</h1>    		
+    	</div>
+    	<div data-role="content">     		
+	    	<ul data-role="listview">
+	    		<li><div class='out-lang' value="th">Thai</div></li>
+	    		<li><div class='out-lang' value="ar">Arabic</div></li>
+	    		<li><div class='out-lang' value="zh-CN">Chinese (Simplified)</div></li>
+	    		<li><div class='out-lang' value="nl">Dutch</div></li>
+	    		<li><div class='out-lang' value="tl">Filipino</div></li>
+	    		<li><div class='out-lang' value="fr">French</div></li>
+	    		<li><div class='out-lang' value="de">German</div></li>
+	    		<li><div class='out-lang' value="hi">Hindi</div></li>
+	    		<li><div class='out-lang' value="id">Indonesian</div></li>
+	    		<li><div class='out-lang' value="it">Italian</div></li>
+	    		<li><div class='out-lang' value="ja">Japanese</div></li>	    		
+	    		<li><div class='out-lang' value="ko">Korean</div></li>	    		
+	    		<li><div class='out-lang' value="ru">Russian</div></li>	    		
+	    		<li><div class='out-lang' value="vi">Vietnamese</div></li>	    		
+	    	</ul>
+	    </div>	
+    </div>
+</body>
+</html>

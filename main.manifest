@@ -1,0 +1,23 @@
+CACHE MANIFEST
+
+# MAIN PAGE
+index.html
+
+# SCRIPTS
+http://www.google.com/jsapi
+scripts/jquery-1.4.3.min.js
+scripts/jquery.mobile-1.0a1.min.js
+scripts/jquery.cookie.js
+scripts/bookmark-bubble.js
+scripts/translate-instant.js
+
+# STYLE SHEET
+scripts/jquery.mobile-1.0a1.min.css
+scripts/translate-instant.css
+
+# IMAGES
+images/bg.png
+images/ti.png
+scripts/images/icons-18-white.png
+scripts/images/ajax-loader.png
+scripts/images/ajax-loader.gif
