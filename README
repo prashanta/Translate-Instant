@@ -1,6 +1,10 @@
-Google Translate Instant
-========================
+Translate Instant
+=================
 
 Google translate using jQuery Mobile framework. Translate is triggered on every key press for near real time conversion.
 
 Demo: http://pmshrestha.byethost4.com/labs/translate-instant/index.html
+
+UPDATE!
+-------
+Translate-Instant is non functional since Google deprecated API access to its Translate service.
